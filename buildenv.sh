@@ -16,19 +16,19 @@ fi
 
 
 if [ ! $VENV_PATH ]; then
-    VENV_PATH=../venv
+    VENV_PATH=./venv
 fi
 
 if [ ! $REQ_FILE ]; then
-    REQ_FILE=../req.txt
+    REQ_FILE=./req.txt
 fi
 
 if [ ! $DEV_REQ_FILE ]; then
-    DEV_REQ_FILE=../dev-req.txt
+    DEV_REQ_FILE=./dev-req.txt
 fi
 
 if [ ! $JS_REQ_FILE ]; then
-    JS_REQ_FILE=../js-req.txt
+    JS_REQ_FILE=./js-req.txt
 fi
 
 if [ ! $JS_ENV_JOBS ]; then
