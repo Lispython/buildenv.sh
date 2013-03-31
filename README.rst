@@ -26,6 +26,8 @@ also you can specify variables before ``buildenv.sh`` include::
   DEV_REQ_FILE="dev-req.txt" # Specified development requirements file
   JS_ENV_JOBS=10 # Nodeenv jobs
 
+  . ./buildenv/buildenv.sh
+
 
 Build virtualenv by command::
 
