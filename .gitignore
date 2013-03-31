@@ -1,0 +1,8 @@
+venv/*
+
+nodeenv.py
+virtualenv.py
+*~
+
+*.pyc
+*.pyo
