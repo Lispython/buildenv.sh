@@ -79,15 +79,17 @@ js(){
 	prod_py
     fi
 
+    . $VENV_PATH/bin/activate
+
     if [ ! -f $VENV_PATH/bin/node ]; then
 	echo "Node not found, installing ..."
 	curl https://raw.github.com/ekalinin/nodeenv/e85a806e21d9bb5e417f1c17080964c485332b27/nodeenv.py > ./nodeenv.py
-	python ./nodeenv.py --jobs=$JS_ENV_JOBS -p $VENV_PATH
+	echo "python ./nodeenv.py --jobs=$JS_ENV_JOBS -p"
+	python ./nodeenv.py --jobs=$JS_ENV_JOBS -p
     fi
 
     if [ -f $JS_REQ_FILE ]; then
 	echo "Success"
-	. $VENV_PATH/bin/activate
 	cat "$JS_REQ_FILE" | awk '{ print "npm install -g "$1}' | sh
     else
 	echo "No js requirements exists"
