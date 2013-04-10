@@ -14,5 +14,13 @@ PYTHON_VERSION="python2.6"
 VENV_PATH="./venv"
 JS_REQ_FILE="./js-req.txt"
 
+
+if [ ! -d "./buildenv/" ]; then
+    git clone https://github.com/Lispython/buildenv.sh.git buildenv
+else
+    cd buildenv && git pull && cd ..
+fi
+
+
 . ./buildenv.sh
 
