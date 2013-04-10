@@ -10,12 +10,11 @@
 # :github: http://github.com/Lispython/buildenv.sh
 
 
-VERSION="0.0.4"
+VERSION="0.0.5"
 
 if [ ! $PYTHON_VERSION ]; then
     PYTHON_VERSION="python2.7"
 fi
-
 
 if [ ! $VENV_PATH ]; then
     VENV_PATH=./venv
