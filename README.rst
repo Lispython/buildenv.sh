@@ -14,6 +14,10 @@ Add buildenv.sh as submodule for you project::
 
 Create in you project root sh/bash script (such as ``env.sh``) with a similar content::
 
+  if [ ! -d "./buildenv/" ]; then
+      git clone https://github.com/Lispython/buildenv.sh.git buildenv
+  fi
+
   . ./buildenv/buildenv.sh
 
 

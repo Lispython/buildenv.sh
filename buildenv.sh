@@ -10,6 +10,8 @@
 # :github: http://github.com/Lispython/buildenv.sh
 
 
+VERSION="0.0.2"
+
 if [ ! $PYTHON_VERSION ]; then
     PYTHON_VERSION="python2.7"
 fi
@@ -36,6 +38,9 @@ if [ ! $JS_ENV_JOBS ]; then
 fi
 
 
+activate(){
+    . $VENV_PATH/bin/activate
+}
 
 empty_env(){
     curl https://raw.github.com/pypa/virtualenv/master/virtualenv.py > ./virtualenv.py
@@ -45,7 +50,7 @@ empty_env(){
     else
 	echo "Virtualenv exists"
     fi
-    . $VENV_PATH/bin/activate
+    activate
     $VENV_PATH/bin/easy_install pip
 }
 
@@ -79,7 +84,8 @@ js(){
 	prod_py
     fi
 
-    . $VENV_PATH/bin/activate
+    activate
+
 
     if [ ! -f $VENV_PATH/bin/node ]; then
 	echo "Node not found, installing ..."
@@ -105,6 +111,8 @@ case $1 in
 	"js") js;;
 
         "empty_env") empty_env;;
+
+        "activate" ) activate;;
 
 	*) empty_env;;
 esac
