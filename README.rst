@@ -8,7 +8,12 @@ python virtualenv and node virtualenv.
 Usage
 -----
 
-Add buildenv.sh as submodule for you project::
+To install buildenv.sh copy-paste this code to you shell::
+
+  curl https://raw.github.com/Lispython/buildenv.sh/master/env.sh > ./env.sh
+
+
+or add buildenv.sh as submodule for you project::
 
   git submodule add https://github.com/Lispython/buildenv.sh.git buildenv
 
