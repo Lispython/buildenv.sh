@@ -10,7 +10,7 @@
 # :github: http://github.com/Lispython/buildenv.sh
 
 
-VERSION="0.0.5"
+VERSION="0.0.6"
 
 if [ ! $PYTHON_VERSION ]; then
     PYTHON_VERSION="python2.7"
@@ -44,7 +44,7 @@ activate(){
 empty_env(){
     if [ ! -d "$VENV_PATH/" ]; then
 	echo "Virtualenv not exists, creating..."
-	curl https://raw.github.com/pypa/virtualenv/master/virtualenv.py > ./virtualenv.py
+	curl https://raw.github.com/pypa/virtualenv/1.9.1/virtualenv.py > ./virtualenv.py
 	python ./virtualenv.py --python=$PYTHON_VERSION --clear $VENV_PATH
     else
 	echo "Virtualenv exists"

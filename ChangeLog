@@ -1,6 +1,11 @@
 buildenv.sh ChangeLog
 =====================
 
+#v 0.0.6 (30-07-2013)
+
+- Freez virtualenv
+
+
 #v 0.0.4 (10-04-2013)
 
 - Added activate option
