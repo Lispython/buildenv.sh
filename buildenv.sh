@@ -10,7 +10,7 @@
 # :github: http://github.com/Lispython/buildenv.sh
 
 
-VERSION="0.0.6"
+VERSION="0.0.7"
 
 if [ ! $PYTHON_VERSION ]; then
     PYTHON_VERSION="python2.7"
