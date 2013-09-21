@@ -62,7 +62,7 @@ prod_py(){
     else
 	echo "No requirements exists"
     fi
-    python ./virtualenv.py --relocatable $VENV_PATH
+    virtualenv --relocatable $VENV_PATH
 }
 
 dev_py(){
@@ -74,7 +74,7 @@ dev_py(){
     else
 	echo "No dev requirements exists"
     fi
-    python ./virtualenv.py --relocatable $VENV_PATH
+    virtualenv --relocatable $VENV_PATH
 }
 
 js(){
