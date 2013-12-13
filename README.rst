@@ -10,7 +10,7 @@ Usage
 
 To install buildenv.sh copy-paste this code to you shell::
 
-  curl https://raw.github.com/Lispython/buildenv.sh/master/env.sh > ./env.sh
+  curl https://raw.github.com/Lispython/buildenv.sh/master/env.sh > ./env.sh && chmod +x ./env.sh
 
 
 or add buildenv.sh as submodule for you project::
