@@ -1,11 +1,17 @@
 #!/bin/sh
 
-if [ ! -d "./buildenv/" ]; then
-
-    git submodule add -b master https://github.com/Lispython/buildenv.sh.git buildenv
-
+if [ ! -d "./.git/" ]; then
+	curl https://raw.github.com/Lispython/buildenv.sh/master/buildenv.sh > ./buildenv.sh
+	. ./buildenv.sh
 else
-    cd buildenv && git pull && cd ..
-fi
 
-. ./buildenv/buildenv.sh
+	if [ ! -d "./buildenv/" ]; then
+
+		git submodule add -b master https://github.com/Lispython/buildenv.sh.git buildenv
+		cd buildenv && git checkout master && cd ..
+	else
+		cd buildenv && git checkout master && git pull && cd ..
+	fi
+
+	. ./buildenv/buildenv.sh
+fi
