@@ -88,7 +88,7 @@ js(){
 
     if [ ! -f $VENV_PATH/bin/node ]; then
 	echo "Node not found, installing ..."
-	curl https://raw.github.com/ekalinin/nodeenv/e85a806e21d9bb5e417f1c17080964c485332b27/nodeenv.py > ./nodeenv.py
+	curl -L https://raw.github.com/ekalinin/nodeenv/e85a806e21d9bb5e417f1c17080964c485332b27/nodeenv.py > ./nodeenv.py
 	echo "python ./nodeenv.py --jobs=$JS_ENV_JOBS -p"
 	python ./nodeenv.py --jobs=$JS_ENV_JOBS -p
     fi
