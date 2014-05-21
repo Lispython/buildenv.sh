@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ ! -d "./.git/" ]; then
-	curl https://raw.github.com/Lispython/buildenv.sh/master/buildenv.sh > ./buildenv.sh
+	curl -L https://raw.github.com/Lispython/buildenv.sh/master/buildenv.sh > ./buildenv.sh
 	. ./buildenv.sh
 else
 
